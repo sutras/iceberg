@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .iceberg-container {
+                border: 1px gray solid;
+            }
+            .iceberg-slide {
+                width: 320px;
+                height: 240px;
+                color: white;
+            }
+            .iceberg-slide:nth-child(1) {
+                background-color: maroon;
+            }
+            .iceberg-slide:nth-child(2) {
+                background-color: purple;
+            }
+            .iceberg-slide:nth-child(3) {
+                background-color: navy;
+            }
+            .iceberg-prev,
+            .iceberg-next {
+                position: absolute;
+                bottom: 0;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: gray;
+                cursor: pointer;
+            }
+            .iceberg-prev {
+                left: 0;
+            }
+            .iceberg-next {
+                right: 0;
+            }
+            .iceberg-page {
+                position: absolute;
+                bottom: 0;
+                left: 30px;
+                right: 30px;
+                text-align: center;
+            }
+            .iceberg-page-item {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                margin-left: 2px;
+                font-size: 12px;
+                background-color: gray;
+                cursor: pointer;
+            }
+            .iceberg-page-item-active {
+                color: white;
+                background-color: black;
+            }
+            .iceberg-prev:hover,
+            .iceberg-next:hover,
+            .iceberg-page-item:hover {
+                background-color: silver;
+            }
+        </style>
+        <script src="./jquery.min.js"></script>
+        <script src="../dist/jquery.iceberg.js"></script>
+    </head>
+    <body>
+        <div class="iceberg-container">
+            <div class="iceberg-wrapper">
+                <div class="iceberg-slide">滑块1</div>
+                <div class="iceberg-slide">滑块2</div>
+                <div class="iceberg-slide">滑块3</div>
+            </div>
+            <div class="iceberg-prev">&lt;</div>
+            <div class="iceberg-next">&gt;</div>
+            <div class="iceberg-page"></div>
+        </div>
+
+        <script type="text/javascript">
+            jQuery('.iceberg-container').iceberg({
+                effect: 'slide'
+            });
+        </script>
+    </body>
+</html>
