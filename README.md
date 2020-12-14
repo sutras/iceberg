@@ -154,7 +154,7 @@ $().data().iceberg
 
 ### 带底部和入场动画的全屏轮播
 
-```
+``` js
 (function() {
     var MOTION_IN = 'motionIn',
         MOTION_OUT = 'motionOut',
